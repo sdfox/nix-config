@@ -50,6 +50,14 @@
     ibus.engines = with pkgs; [ ibus-engines.libpinyin ];
   };
 
+  # Add Google CJK fonts
+  fonts.packages = with pkgs; [
+    noto-fonts-cjk-sans
+  ];
+
+  # Enable font config
+  fonts.fontconfig.enable = true;
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
