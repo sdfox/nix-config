@@ -101,7 +101,10 @@
     packages = with pkgs; [
     #  thunderbird
     ];
+    shell = pkgs.fish;
   };
+
+  programs.fish.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
