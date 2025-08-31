@@ -1,0 +1,18 @@
+{
+  description = "A very basic flake";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+  };
+
+  outputs = { self, nixpkgs }: {
+    # Used with `nixos-rebuild --flake .#<hostname>`
+    # nixosConfigurations."<hostname>".config.system.build.toplevel must be a derivation
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./configuration.nix
+      ];
+    };
+  };
+}
