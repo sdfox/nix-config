@@ -115,15 +115,34 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  cmake
-  dae
-  gcc
-  gdb
-  git
-  gnumake
-  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  # wireguard-tools
+    cmake
+    dae
+    fish
+    gcc
+    gdb
+    git
+    gnumake
+    tldr
+    tmux
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # wget
+    # wireguard-tools
+    qemu
+    autoconf
+    automake
+    curl
+    python3
+    gmp
+    mpfr
+    libmpc
+    texinfo
+    flex
+    bison
+    coreutils
+    util-linux
+    expat
+    zlib
+    ncurses
   ];
 
   services.dae = {
