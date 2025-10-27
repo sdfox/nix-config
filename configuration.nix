@@ -8,8 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./fonts.nix
-      ./ime.nix
+      ./modules/fonts.nix
+      ./modules/ime.nix
+
+      ./modules/build-essential.nix
+      ./modules/ocaml.nix
+      ./modules/coq.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -95,6 +99,7 @@
   programs.fish.enable = true;
   programs.clash-verge.enable = true;
   programs.git.enable = true;
+  programs.yazi.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -119,6 +124,7 @@
   # };
 
   # List services that you want to enable:
+  services.tlp.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
