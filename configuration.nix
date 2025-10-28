@@ -160,6 +160,6 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
-
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
 
