@@ -20,11 +20,13 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    nixpkgs-review
+    gh
   ];
 
   programs.git = {
     enable = true;
-    userName = "sdfox";
+    userName = "Zi Ran";
     userEmail = "sdfox05@gmail.com";
     extraConfig = {
       core.editor = "vim";
