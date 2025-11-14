@@ -12,5 +12,6 @@
     libiconv
     libtool
     pkg-config
+    python311
   ];
 }

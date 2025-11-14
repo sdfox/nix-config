@@ -14,10 +14,14 @@
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "qq"
     "wechat"
+    "steam"
+    "steam-unwrapped"
   ];
 
   environment.systemPackages = with pkgs; [
     qq
     wechat
   ];
+
+  programs.steam.enable = true;
 }

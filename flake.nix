@@ -14,28 +14,17 @@
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
+        ./modules
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.sdfox = ./users/sdfox;
-          home-manager.users.ziran = ./users/ziran;
+          home-manager.users.sdfox = ./home/users/sdfox;
+          home-manager.users.ziran = ./home/users/ziran;
 
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
         }
-        # RISC-V cross compile support
-        ({ config, pkgs, lib, ... }: {
-          environment.systemPackages = with pkgs.pkgsCross.riscv64.buildPackages; [
-            gcc
-            gdb
-            binutils
-          ] ++ [ pkgs.qemu ];
-
-          environment.variables = {
-            CROSS_COMPILE = "riscv64-unknown-linux-gnu-";
-          };
-        })
       ];
     };
   };
