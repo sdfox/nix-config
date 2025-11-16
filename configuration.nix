@@ -15,6 +15,7 @@
       ./modules/ocaml.nix
       ./modules/coq.nix
       ./modules/unfree.nix
+      ./modules/riscv.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
