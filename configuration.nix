@@ -51,11 +51,14 @@
     pulseaudio
     swayidle
     swaylock
-    wmenu
-    rofi
+    # wmenu
+    # rofi
+    fuzzel
     swaybg
     waybar
     mako
+    libnotify
+    pwvucontrol
   ];
   
 
@@ -112,10 +115,15 @@
     tmux
     htop
     busybox
+    toybox
     tealdeer
     alacritty
     hyfetch
     neofetch
+    alsa-utils
+    nixpkgs-review
+    gh
+    telegram-desktop
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
