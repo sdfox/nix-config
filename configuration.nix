@@ -88,6 +88,14 @@
       tree
     ];
     shell = pkgs.fish;
+    initialPassword = "123456";
+  };
+
+  users.users.ziran = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "networkmanager" ];
+    shell = pkgs.fish;
+    initialPassword = "123456";
   };
 
   programs.firefox.enable = true;

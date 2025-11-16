@@ -30,7 +30,8 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.sdfox = ./home.nix;
+          home-manager.users.sdfox = ./home/sdfox.nix;
+          home-manager.users.ziran = ./home/ziran.nix;
 
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
