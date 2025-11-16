@@ -20,20 +20,15 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    nixpkgs-review
-    gh
-    telegram-desktop
   ];
 
   programs.git = {
     enable = true;
-    userName = "Zi Ran";
+    userName = "sdfox";
     userEmail = "sdfox05@gmail.com";
     extraConfig = {
       core.editor = "vim";
       init.defaultBranch = "main";
     };
   };
-
-  programs.chromium.enable = true;
 }

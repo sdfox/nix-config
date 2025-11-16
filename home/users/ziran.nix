@@ -21,4 +21,14 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
   ];
+
+  programs.git = {
+    enable = true;
+    userName = "Zi Ran";
+    userEmail = "sdfox05@gmail.com";
+    extraConfig = {
+      core.editor = "vim";
+      init.defaultBranch = "main";
+    };
+  };
 }
