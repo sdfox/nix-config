@@ -8,14 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/fonts.nix
-      ./modules/ime.nix
-
-      ./modules/build-essential.nix
-      ./modules/ocaml.nix
-      ./modules/coq.nix
-      ./modules/unfree.nix
-      ./modules/riscv.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

@@ -13,7 +13,19 @@
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        # Essential modules
         ./configuration.nix
+        ./modules/fonts.nix
+        ./modules/ime.nix
+
+        # Optional modules
+        ./modules/build-essential.nix
+        ./modules/ocaml.nix
+        ./modules/coq.nix
+        ./modules/unfree.nix
+        ./modules/riscv.nix
+
+        # Home Manager
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
