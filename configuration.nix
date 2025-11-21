@@ -52,7 +52,7 @@
     swayidle
     swaylock
     # wmenu
-    # rofi
+    rofi
     fuzzel
     swaybg
     waybar
