@@ -10,14 +10,14 @@
   #            "wechat"
   #          ];
   #        }
-
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "qq"
-    "wechat"
-  ];
+  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    qq
-    wechat
+    steam
+    (olympus.override {
+      celesteWrapper = "steam-run";
+    })
   ];
+
+  programs.steam.enable = true;
 }
