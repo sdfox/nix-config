@@ -105,12 +105,16 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     tmux
+
     htop
     busybox
     tealdeer
     hyfetch
     alsa-utils
     emacs
+    python3
+    yazi
+    tty-clock
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
@@ -123,7 +127,6 @@
 
   # List services that you want to enable:
   services.tlp.enable = true;
-  services.blueman.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

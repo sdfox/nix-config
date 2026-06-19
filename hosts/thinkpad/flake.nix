@@ -16,6 +16,9 @@
           ./hardware-configuration.nix
           ../../modules/fonts.nix
           ../../modules/ime.nix
+          ../../modules/unfree.nix
+          ../../modules/mpd.nix
+          ../../modules/bluetooth.nix
         ];
       };
     };

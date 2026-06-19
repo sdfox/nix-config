@@ -5,6 +5,4 @@
     mpc
     ncmpcpp
   ];
-
-  services.mpd.enable = true;
 }
