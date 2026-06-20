@@ -19,6 +19,7 @@
           ../../modules/unfree.nix
           ../../modules/mpd.nix
           ../../modules/bluetooth.nix
+          ../../modules/gnupg.nix
         ];
       };
     };
